@@ -38,6 +38,10 @@ public class Trigger_1 : MonoBehaviour {
 		if (walk == true) {
 			manAnimator.Play (walkingManAnimation);
 		}
+
+		Vector3 tempPos = new Vector3(target.position.x, 0, target.position.z);
+		
+		aggressiveMan.transform.LookAt (tempPos);
 	}
 
 	void OnTriggerEnter() {
